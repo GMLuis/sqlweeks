@@ -1,0 +1,12 @@
+show databases;
+use employees;
+select * from employees;
+select * from employees where birth_date < '1965-01-01';
+select * from employees where gender like 'f' and hire_date > '1990-01-01';
+select first_name, last_name from employees where last_name like 'f%' limit 50;
+insert into employees values(100,'1999-01-12', 'John', 'King', 'M', '2019-08-21'),(101,'1989-04-13', 'Jay', 'Chill', 'M', '2014-02-23'),(102,'1989-02-08', 'Jessica', 'Ring', 'F', '2010-11-09'); 
+update employees set first_name = 'Bob' where emp_no = 10023;
+update employees set hire_date = '2002-01-01' where first_name like 'P%';
+update employees set hire_date = '2002-01-01' where last_name like 'P%';
+delete from employees where emp_no < 10000;
+delete from employees where emp_no = 10048 and 10099 and 10234 and 20089;
